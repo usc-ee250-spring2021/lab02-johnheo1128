@@ -3,8 +3,10 @@
 List team members here.
 
 Insert Github repository link here.
+
+link to repo: https://github.com/usc-ee250-spring2021/lab02-johnheo1128 
+link to video demo: https://drive.google.com/file/d/1bB0rB0y8Eu4QCs3bQ8dO828X6LQB_jmq/view?usp=sharing
 """
-#https://github.com/usc-ee250-spring2021/lab02-johnheo1128 
 """python3 interpreters in Ubuntu (and other linux distros) will look in a 
 default set of directories for modules when a program tries to `import` one. 
 Examples of some default directories are (but not limited to):
