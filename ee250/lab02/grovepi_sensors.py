@@ -41,7 +41,7 @@ if __name__ == '__main__':
     time.sleep(0.5)
     # Read from potentiometer
     threshold = grovepi.analogRead(potentiometer)
-    threshold /= floor(1023/517) #compress 1023 to 517
+    threshold *= (517/1023) #compress 1023 to 517
     # Read distance value from Ultrasonic
     distance = grovepi.ultrasonicRead(ultrasonic)
 
