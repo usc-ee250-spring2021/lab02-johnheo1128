@@ -43,6 +43,8 @@ if __name__ == '__main__':
     threshold = grovepi.analogRead(potentiometer)
     # Read distance value from Ultrasonic
     distance = grovepi.ultrasonicRead(ultrasonic)
+    thr = str(threshold)
+    dist = str(distance)
     print("thresh: " + threshold + "\n")
     print("dist: " + distance + "\n\n")
 
