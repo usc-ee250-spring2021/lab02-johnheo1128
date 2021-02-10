@@ -50,10 +50,10 @@ if __name__ == '__main__':
     thr = str(threshold)
     dist = str(distance)
     if distance < threshold: #object detected!
-      setText_norefresh(thr + "cm " + "OBJ PRES\n" + dist + "cm ")
+      setText_norefresh(thr + "cm " + "OBJ PRES  \n" + dist + "cm ")
       setRGB(255,0,0)
     else:
-      setText_norefresh(thr + "cm \n" + dist + "cm ")
+      setText_norefresh(thr + "cm " + "          \n" + dist + "cm ")
       setRGB(0,255,0)
     #print("thresh: " + thr + "\n")
     #print("dist: " + dist + "\n\n")
