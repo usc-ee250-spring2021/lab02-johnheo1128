@@ -34,11 +34,6 @@ if __name__ == '__main__':
   ultrasonic = 4
   #Connect rotary angle sensor to A2
   potentiometer = 2 
-  
-  oled_init()
-  oled_clearDisplay()
-  oled_setNormalDisplay()
-  oled_setVerticalMode()
   time.sleep(.1)
   while True:
     #So we do not poll the sensors too quickly which may introduce noise,
