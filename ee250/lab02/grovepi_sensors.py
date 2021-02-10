@@ -45,8 +45,8 @@ if __name__ == '__main__':
     distance = grovepi.ultrasonicRead(ultrasonic)
     thr = str(threshold)
     dist = str(distance)
-    print("thresh: " + threshold + "\n")
-    print("dist: " + distance + "\n\n")
+    print("thresh: " + thr + "\n")
+    print("dist: " + dist + "\n\n")
 
 
 
