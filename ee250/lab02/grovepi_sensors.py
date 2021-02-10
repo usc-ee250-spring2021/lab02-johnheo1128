@@ -30,24 +30,26 @@ be true"""
 
 if __name__ == '__main__':
 
-#Connect ultrasounic sensor to D4
-ultrasonic = 4
-#Connect rotary angle sensor to A2
-potentiometer = 2 
-
-oled_init()
-oled_clearDisplay()
-oled_setNormalDisplay()
-oled_setVerticalMode()
-time.sleep(.1)
-while True:
-  #So we do not poll the sensors too quickly which may introduce noise,
-  #sleep for a reasonable time of 200ms between each iteration.
-  time.sleep(0.5)
-  # Read angle from potentiometer
-  print(grovepi.analogRead(potentiometer))
-  # Read distance value from Ultrasonic
-  print(grovepi.ultrasonicRead(ultrasonic) + "\n")
+  #Connect ultrasounic sensor to D4
+  ultrasonic = 4
+  #Connect rotary angle sensor to A2
+  potentiometer = 2 
+  
+  oled_init()
+  oled_clearDisplay()
+  oled_setNormalDisplay()
+  oled_setVerticalMode()
+  time.sleep(.1)
+  while True:
+    #So we do not poll the sensors too quickly which may introduce noise,
+    #sleep for a reasonable time of 200ms between each iteration.
+    time.sleep(0.5)
+    # Read from potentiometer
+    threshold = grovepi.analogRead(potentiometer)
+    # Read distance value from Ultrasonic
+    distance = grovepi.ultrasonicRead(ultrasonic)
+    print("thresh: " + threshold + "\n")
+    print("dist: " + distance + "\n\n")
 
 
 
