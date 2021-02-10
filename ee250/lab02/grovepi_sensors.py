@@ -34,11 +34,10 @@ if __name__ == '__main__':
   ultrasonic = 4
   #Connect rotary angle sensor to A2
   potentiometer = 2 
-  time.sleep(.1)
   while True:
     #So we do not poll the sensors too quickly which may introduce noise,
     #sleep for a reasonable time of 200ms between each iteration.
-    time.sleep(0.5)
+    time.sleep(0.2)
     # Read from potentiometer
     threshold = grovepi.analogRead(potentiometer)
     # Read distance value from Ultrasonic
