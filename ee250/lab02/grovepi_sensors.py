@@ -27,7 +27,7 @@ from grove_rgb_lcd import *
 """This if-statement checks if you are running this python file directly. That 
 is, if you run `python3 grovepi_sensors.py` in terminal, this if-statement will 
 be true"""
-
+setRGB(0,255,0)
 if __name__ == '__main__':
 
   #Connect ultrasounic sensor to D4
@@ -44,16 +44,18 @@ if __name__ == '__main__':
     threshold /= floor(1023/517) #compress 1023 to 517
     # Read distance value from Ultrasonic
     distance = grovepi.ultrasonicRead(ultrasonic)
-    #compare
-    flag=0
-    if threshold > distance
-      flag=1
-      print("object detected!")
 
     thr = str(threshold)
     dist = str(distance)
-    print("thresh: " + thr + "\n")
-    print("dist: " + dist + "\n\n")
+    if distance < threshold: #object detected!
+      setText_norefresh(thr + "cm " + "OBJ PRES\n" + dist + "cm ")
+      setRGB(255,0,0)
+    else:
+      setText_norefresh(thr + "cm \n" + dist + "cm ")
+      setRGB(0,255,0)
+    #print("thresh: " + thr + "\n")
+    #print("dist: " + dist + "\n\n")
+    
 
 
 
